@@ -4,9 +4,7 @@ import store from './redux/store'
 export default function App() {
   return (
     <Provider store={store}>
-    <div>
       <Main/>
-    </div>
     </Provider>
   )
 }

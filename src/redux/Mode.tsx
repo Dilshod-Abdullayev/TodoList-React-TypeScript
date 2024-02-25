@@ -1,6 +1,7 @@
 import { createSlice } from "@reduxjs/toolkit";
 import type { RootState } from "./store";
-export interface CounterState {
+
+interface CounterState {
     value: boolean
   }
   const initialState: CounterState = {
@@ -10,8 +11,11 @@ export const ModeSlice=createSlice({
     name:'mode',
     initialState,
     reducers:{
-        handleToggle:state=>{
-            !state.value
+        handleToggle:(state)=>{
+            return {
+              ...state,
+              value:!state.value
+            }
         }
     }
 })
