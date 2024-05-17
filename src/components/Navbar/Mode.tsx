@@ -8,7 +8,6 @@ export default function Mode() {
   const theme = useSelector((state: RootState) => state.mode)
   const handleClick = () => {
     dispatch(handleToggle())
-    console.log(theme);
   }
   return (
     <motion.div
