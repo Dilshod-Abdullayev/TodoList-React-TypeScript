@@ -14,6 +14,8 @@ import { useState } from "react";
 export default function TasksPanel() {
     const [hid, setHid] = useState(true)
     const [select, setSelect] = useState(true)
+    console.log(select);
+    
     const [sortedTodos, setSortedTodos] = useState<Array<{
         id: number;
         text: string;
